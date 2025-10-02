@@ -5,10 +5,10 @@ class ClassRoom:
         self.subjects=[]
 
     def add_student(self,student):
-        pass
+        self.students.append(student)
 
     def add_subject(self,subject):
-        pass
+        self.subjects.append(subject)
 
     def  take_semester_final(self): 
         pass
