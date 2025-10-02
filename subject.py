@@ -7,5 +7,5 @@ class Subject:
         self.pass_mark=pass_mark
 
 
-    def exam(students):
+    def exam(self,students):
         pass
