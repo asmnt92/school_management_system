@@ -1,5 +1,5 @@
 from person import Person
-
+import random
 class Teacher(Person):
 
     def __init__(self, name):
@@ -9,4 +9,4 @@ class Teacher(Person):
         pass
 
     def evaluate_exam(self):
-        pass
+        return random.randint(1,100)
