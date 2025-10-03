@@ -14,7 +14,9 @@ class School:
         self.teachers[subject]=teacher
 
     def student_admission(self,student):
-        pass
+        class_name=student.classroom.name
+        self.classrooms[class_name].add_student(student)
+
 
     @staticmethod
     def calculate_grade(marks):
@@ -65,8 +67,42 @@ class School:
 
     def __repr__(self):
         # all classrooms 
+        print('******************************************')
+        for key,value in self.classrooms.items():
+            print(key)
+        print('------------------------------------------')
+        
         # all students 
+        print('************** All Student ****************')
+        for key,classroom in self.classrooms.items():
+                print(f'Class : {key.upper()} -- All STUDENT')
+                for student in classroom.students:
+                    print(student.name)
+
+        print('------------------------------------------')
         # all subjects 
+        print('************* ALL STUDENT ****************')
+        for key,classroom in self.classrooms.items():
+                print(f'Class : {key.upper()} -- All SUBJECT')
+                for subject in classroom.subjects:
+                    print(subject.name)
+
+        print('------------------------------------------')
+
+
         # all teachers 
+        print('************** ALL TEACHERS ****************')
+        for subject_name,teacher in self.teachers.items():
+            print(teacher)
+
+        print('------------------------------------------')
+
         # all stuent results 
-        pass
+        print('********** ALL STUDENT RESULTS ************')
+        for key, classroom in self.classrooms.items():
+            for student in classroom.students:
+                print(f'Roll: {student.id}--- GPA: {student.grade}')
+
+
+        return ''
+        
