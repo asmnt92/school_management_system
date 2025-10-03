@@ -67,40 +67,41 @@ class School:
 
     def __repr__(self):
         # all classrooms 
-        print('******************************************')
+        print('ALL CLASSROOMS'.center(80,'*'))
         for key,value in self.classrooms.items():
             print(key)
-        print('------------------------------------------')
+        print('end'.center(80,'-'))
         
         # all students 
-        print('************** All Student ****************')
+        print('All Student'.center(80,'*'))
         for key,classroom in self.classrooms.items():
-                print(f'Class : {key.upper()} -- All STUDENT')
+                print(f'{key.upper()} -- All STUDENT'.center(80,'-'))
                 for student in classroom.students:
-                    print(student.name)
+                    print(f'\t{student.name}')
 
-        print('------------------------------------------')
+        print('end'.center(80,'-'))
         # all subjects 
-        print('************* ALL STUDENT ****************')
+        print('ALL SUBJECTS'.center(80,'*'))
         for key,classroom in self.classrooms.items():
                 print(f'Class : {key.upper()} -- All SUBJECT')
                 for subject in classroom.subjects:
-                    print(subject.name)
+                    print('\t',subject.name)
 
-        print('------------------------------------------')
+        print('end'.center(80,'-'))
 
 
         # all teachers 
-        print('************** ALL TEACHERS ****************')
-        for subject_name,teacher in self.teachers.items():
-            print(teacher)
+        # print('ALL TEACHERS'.center(80,'*'))
+        # for subject_name,teacher in self.teachers.items():
+        #     print(teacher.name)
 
-        print('------------------------------------------')
+        # print('end'.center(80,'-'))
 
         # all stuent results 
-        print('********** ALL STUDENT RESULTS ************')
+        print('ALL STUDENT RESULTS'.center(80,'*'))
         for key, classroom in self.classrooms.items():
             for student in classroom.students:
+
                 print(f'Roll: {student.id}--- GPA: {student.grade}')
 
 
